@@ -4,7 +4,7 @@ const database = require("./database");
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
   res.render("index.ejs", {
