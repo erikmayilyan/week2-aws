@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The Notes</h1>
+    <a href="/createNote">Create New Note</a>
+      <% for (let i = 0; i < note.length; i++) { %>
+      <h3><%= note[i].title %></h3>
+      <p><%= note[i].contents.substring(0, 200) %></p>
+      <a href="/notes/<%= note[i].id %>">View More</a>
+      <% } %>
+</body>
+
+</html>
